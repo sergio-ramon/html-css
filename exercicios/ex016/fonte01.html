@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            background-color: lightcoral;
+            font-family: 'work sans', Arial, Helvetica, sans-serif;
+            /* 
+            Medidas Absolutas 
+            cm, mm, in (polegada), px, pt, pc
+            
+            Medidas Relativas 
+            em, ex, rem, vw, vh, %
+            16px, geralmente, é igual a 1em
+            */
+            font-size: 1em;
+            
+            /* lighter normal bold bolder */
+        }
+
+        main {
+            background-color: white;
+            width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px rgba(117, 62, 62, 0.603);
+            text-align: justify;
+        }
+
+        h1 {
+            /* shorthand font
+            - font-style -> font-weight -> font-size -> font-family 
+
+            font-family: 'Work Sans', sans-serif;
+            font-weight: bolder;
+            font-size-adjust: 3em;
+            font-style: italic;
+            */
+            font: italic bolder 3em 'Work Sans', sans-serif;
+        }
+
+        h2 {
+            font: bold 2em 'Work Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Trabalhando com fontes</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error illo et ipsa quasi vel rem suscipit aperiam, mollitia, beatae placeat odit, debitis fugit delectus nemo nesciunt quam earum rerum recusandae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid quaerat ipsa alias quidem molestias placeat nobis quasi perspiciatis aperiam repudiandae accusamus, quis et ab impedit neque reprehenderit aspernatur. Minus, quam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, id quo facilis nisi unde optio aliquid magnam cupiditate sit necessitatibus incidunt sequi, vitae, et earum dolorum non voluptates alias maiores?</p>
+        <h2>Subtítulo do exercício</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo quasi sapiente totam ipsa. Sunt veniam quasi laudantium. Odit velit architecto, sed, eius alias unde repellat modi animi ex, doloremque voluptas.</p>
+    </main>
+</body>
+</html>
