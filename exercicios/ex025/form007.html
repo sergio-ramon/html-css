@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: gray;
+        }
+
+        main {
+            background-color: white;
+            max-width: 500px;
+            margin: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            border-radius: 10px;
+            border: 5px solid black;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        div {
+            margin-top: 10px;
+        }
+
+        div.botao input {
+            background-image: linear-gradient(to bottom, cyan, darkcyan);
+            color: black;
+            border-radius: 10px;
+            border: 2px solid black;
+            margin-left: 3px;
+            padding: 5px;
+            font-weight: bold;
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        div.botao input:hover {
+            border: 2px solid lightcyan;
+            color: lightcyan;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Exemplo de formulário</h1>
+        <hr>
+        <form action="cadastro.php" method="post">
+            <div>
+                <label for="iestado">Estado:</label>
+                <select name="estado" id="iestado" required>
+                    <optgroup label="Região Sudeste">
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP" selected>São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste">
+                        <option value="MA">Maranhão</option>
+                        <option value="PB">Pernambuco</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <label for="iprof">Profissão:</label>
+                <input type="text" name="prof" id="iprof" list="lstprof" required>
+                <datalist id="lstprof">
+                    <option>Administrador</option>
+                    <option>Professor</option>
+                    <option>Desenvolvedor</option>
+                    <option>Contador</option>
+                </datalist>
+            </div>
+            <div>
+                <label for="imsg">Mensgaem:</label> <br>
+                <textarea name="msg" id="imsg" cols="70" rows="10"></textarea>
+                <!-- Utilizar essa opção com método POST devido a limitaçãp de dados do GET -->
+            </div>
+            <div class="botao">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
