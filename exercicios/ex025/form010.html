@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: gray;
+        }
+
+        main {
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            height: 94vh;
+        }
+
+        section {
+            background-color: lightgray;
+            padding: 10px;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 300px;
+            border: 3px solid black;
+        }
+
+        section h1 {
+            text-align: center;
+            color: green;
+        }
+
+        fieldset {
+            padding: 10px;
+            background-color: white;
+        }
+
+        fieldset legend {
+            font-weight: bold;
+        }
+
+        div {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        div.botao input {
+            background-image: linear-gradient(to bottom, lightgreen, darkgreen);
+            color: white;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        div.botao input:hover {
+            color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Exemplo de formulário</h1>
+        </section>
+        <section>
+            <form action="cadastro.php" method="get" autocomplete="on">
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+                    <div>
+                        <label for="iano">Em que ano você nasceu? </label>
+                        <input type="number" name="ano" id="iano" min="1900" max="2024" oninput="calcidade()">
+                    </div>
+                    <div>
+                        <label for="iidade">Sua idade é: </label>
+                        <output id="iidade">0</output>
+                    </div>
+                </fieldset>
+            
+                <div class="botao">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function calcidade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
+</body>
+</html>
