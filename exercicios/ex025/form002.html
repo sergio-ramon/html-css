@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de formulário</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            height: 97vh;
+            width: 98vw;
+            background: url('https://img.freepik.com/vetores-gratis/fundo-de-galaxia-realista_23-2148991322.jpg?t=st=1721223533~exp=1721227133~hmac=5e0a974b6cfa1a26ffbdb2d91d40165e80a66a1aa6b5e0b90b96d832880b8351&w=900') center center no-repeat  fixed;
+            background-size: cover;
+        }
+
+        main {
+            max-width: 300px;
+            margin: auto;
+            margin-top: 20px;
+            padding: 20px;
+            border: 3px solid darkred;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        h1, p {
+            margin-top: 13px;
+        }
+
+        h1 {
+            font-size: 1.2em;
+        }
+
+        hr {
+            margin-top: 10px;
+        }
+
+        p.botao > input {
+            background-color: darkred;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Formulário de cadastro</h1>
+        <hr>
+        <form action="cadastro.php" method="get" autocomplete="on">
+            <p>
+                <label for="iuser">Usuário:</label>
+                <abbr title="Nome de usuário"><input type="text" name="user" id="iuser" required placeholder=" digite o usuário" autocomplete="username"></abbr>
+            </p>
+            <p>
+                <label for="isenha">Senha:</label>
+                <abbr title="Senha de usuário"><input type="password" name="senha" id="isenha" required minlength="8" placeholder=" digite a senha" autocomplete="current-password"></abbr>
+            </p>
+            <p class="botao">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </form>
+    </main>
+</body>
+</html>
