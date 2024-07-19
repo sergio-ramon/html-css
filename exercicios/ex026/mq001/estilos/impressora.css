@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/* Estilo para impressora */
+
+* {
+    margin: 10px;
+    padding: 10px;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    line-height: 1.3em;
+}
+
+menu {
+    display: none;
+}
+
+article {
+    width: 100%;
+    margin: auto;
+}
+
+article::after {
+    content: "Esse artigo foi impresso a partir do curso de HTML5 e CSS3 do Curso em Vídeo";
+}
+
+footer {
+    display: none;
+}
