@@ -18,13 +18,14 @@ header {
 header > h1 {
     display: inline-block;
     color: white;
-    padding: 20px;
+    padding: 20px 0px;
 }
 
 i#icone {
     display: inline-block;
     color: white;
-    margin-left: 20px;
+    font-size: 20px;
+    margin-left: 30px;
 }
 
 i#burguer {
@@ -67,7 +68,7 @@ main {
     width: 90vw;
     background-color: white;
     margin: 10px auto;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
 }
 
