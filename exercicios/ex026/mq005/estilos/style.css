@@ -32,7 +32,7 @@ i#burguer {
     display: block;
     background-color: gray;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -54,7 +54,7 @@ menu > ul > li > a {
     font-weight: bold;
     text-decoration: none;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: gray;
     color: white;
     border-top: 2px solid darkgray;
