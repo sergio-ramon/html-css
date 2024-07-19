@@ -7,10 +7,23 @@
 
     menu {
         display: block;
+        margin-left: 10px;
     }
 
     menu > ul > li {
         display: inline-block;
+    }
+
+    menu > ul > li > a {
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        color: black;
+    }
+
+    menu > ul > li > a:hover {
+        background-color: black;
+        color: white;
     }
 
     main {
