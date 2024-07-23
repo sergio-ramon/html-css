@@ -5,6 +5,10 @@
         display: none;
     }
 
+    header {
+        padding: 0px 50px;
+    }
+
     menu {
         display: block;
         margin-left: 10px;
