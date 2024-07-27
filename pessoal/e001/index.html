@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Header</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100vh;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0px auto;
+        }
+
+        header {
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+            height: 2.2em;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 100%;
+        }
+
+        .material-icons {
+            font-size: 2.2em;
+            line-height: 25px;
+        }
+
+        .nome-site {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.6em;
+        }
+
+        .logo > i {
+            display: none;
+        }
+
+        .logo > i:hover {
+            cursor: pointer;
+        }
+
+        .nav {
+            width: 100%;
+            text-align: right;
+        }
+
+        menu > a {
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: black;
+
+            border-radius: 10px;
+
+            padding: 10px;
+        }
+
+        menu > a:hover {
+            background-color: black;
+            color: white;
+
+            transition: background-color 0.5s, color 1s;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0px auto;
+            padding: 20px;
+        }
+
+        main h2 {
+            margin: 20px 0px;
+        }
+
+        main p {
+            line-height: 2em;
+            margin-bottom: 30px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+            align-items: center;
+
+            border-radius: 10px 10px 0px 0px;
+            background-image: linear-gradient(to top, transparent 75%, black 1%);
+
+            padding: 20px;
+        }
+
+        .card-row {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 100%;
+            margin: 0px;
+        }
+
+        .card {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+
+            background-color: white;
+            background-image: url('https://images.pexels.com/photos/65438/pexels-photo-65438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-position: center center;
+            background-size: cover;
+            color: white;
+
+            width: 300px;
+            height: 200px;
+
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card:hover {
+            box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+
+            transform: translate(-2px, -2px);
+            transition: transform 0.5s;
+        }
+
+        .card > h3 {
+            padding: 3px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .card > p {
+            line-height: 1.5em;
+            margin: 0px;
+            padding: 3px;
+
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .saiba-mais {
+            width: inherit;
+            margin: 50px 0px;
+        }
+
+        .link-botao {
+            background-color: black;
+
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5em;
+            color: white;
+
+            width: 100%;
+            margin: 20px 0px;
+            padding: 10px;
+
+            border-radius: 20px;
+        }
+
+        .link-botao:hover {
+            cursor: pointer;
+            color: lightgray;
+        }
+
+        footer {
+            text-align: center;
+            padding: 5px;
+        }
+
+        @media screen and (min-width: 380px) and (max-width: 768px) {
+            .container {
+                height: auto;
+                padding: 11px 25px;
+                width: 95%;
+
+                flex-flow: column nowrap;
+            }
+
+            .logo > i {
+                display: block;
+            }
+
+            .nav {
+                display: none;
+                text-align: center;
+                margin: 10px 0px;
+            }
+
+            menu {
+                display: flex;
+                flex-direction: column;
+            }
+
+            menu > a {
+                box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+            }
+        }
+    </style>
+</head>
+<body onresize="mudouTamanho()">
+    <section>
+        <header>
+            <div class="container">
+                <section class="logo">
+                    <div class="nome-site">
+                        <i class="material-icons">search</i>
+                        <h1>Título do site</h1>
+                    </div>
+                    <i class="material-icons" onclick="clickMenu()">menu</i>
+                </section>
+                <section class="nav">
+                    <menu>
+                        <a href="#">Home</a>
+                        <a href="#">Notícias</a>
+                        <a href="#">Contato</a>
+                    </menu>
+                </section>
+            </div>
+        </header>
+        <main>
+            <section>
+                <h2>Título</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, dicta! Magni ea incidunt nulla qui nobis mollitia aspernatur suscipit cumque libero, laboriosam, sunt repudiandae tenetur quis nam. Harum, non eius.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate corrupti, hic beatae soluta amet repellendus ea explicabo doloribus sapiente minus ipsam natus. Perferendis esse numquam repudiandae assumenda eum quaerat praesentium! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea itaque reprehenderit debitis dolores quaerat optio quibusdam impedit suscipit commodi. Ullam possimus repellat beatae, inventore et quis eos eius quo omnis.</p>
+            </section>
+
+            <section class="card-container">
+                <section class="card-row">
+                    <div class="card">
+                        <h3>Título</h3>
+                        <p>Informações sobre alguma notícia colocada dentro desses cards.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Título</h3>
+                        <p>Informações sobre alguma notícia colocada dentro desses cards.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Título</h3>
+                        <p>Informações sobre alguma notícia colocada dentro desses cards.</p>
+                    </div>
+                </section>
+                <section class="card-row">
+                    <div class="card">
+                        <h3>Título</h3>
+                        <p>Informações sobre alguma notícia colocada dentro desses cards.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Título</h3>
+                        <p>Informações sobre alguma notícia colocada dentro desses cards.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Título</h3>
+                        <p>Informações sobre alguma notícia colocada dentro desses cards.</p>
+                    </div>
+                </section>
+                <section class="card-row">
+                    <div class="card">
+                        <h3>Título</h3>
+                        <p>Informações sobre alguma notícia colocada dentro desses cards.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Título</h3>
+                        <p>Informações sobre alguma notícia colocada dentro desses cards.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Título</h3>
+                        <p>Informações sobre alguma notícia colocada dentro desses cards.</p>
+                    </div>
+                </section>
+            </section>
+
+            <section class="saiba-mais">
+                <button class="link-botao">Saiba mais</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Site criado para exercício de HTML5 e CSS3</p>
+        </footer>
+    </section>
+
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                document.getElementsByClassName('nav')[0].style.display = 'block'
+            }else {
+                document.getElementsByClassName('nav')[0].style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (document.getElementsByClassName('nav')[0].style.display == 'none') {
+                document.getElementsByClassName('nav')[0].style.display = 'block'
+            }else {
+                document.getElementsByClassName('nav')[0].style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>
