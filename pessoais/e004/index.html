@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionador de Cores</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html, body {
+            height: 100vh;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section { 
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+
+            flex-basis: 350px;
+        }
+
+        #cor-atual {
+            width: 80px;
+            height: 40px;
+            border: 2px solid black;
+
+            margin: 10px;
+        }
+
+        #selec-cor {
+            width: 200px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        option {
+            height: 40px;
+        }
+
+        option#red {
+            background-color: red;
+        }
+
+        option#green {
+            background-color: green;
+        }
+
+        option#blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Cor atual:</h1>
+        <div id="cor-atual"></div>
+
+        <h3>Escolha uma cor abaixo:</h3>
+        <select name="selec-cor" id="selec-cor" size="3">
+            <option value="verm" id="red"></option>
+            <option value="verd" id="green"></option>
+            <option value="azul" id="blue"></option>
+        </select>
+    </section>
+    
+    <script>
+        let opcoes = document.getElementsByTagName('option');
+        let opcArray = Array.from(opcoes);
+
+        let corAtual = document.getElementById('cor-atual');
+
+        for (let i in opcArray) {
+            opcArray[i].addEventListener('click', (c) => {
+                document.body.style.backgroundColor = c.target.id;
+                corAtual.style.backgroundColor = c.target.id;
+            })
+        }
+    </script>
+</body>
+</html>

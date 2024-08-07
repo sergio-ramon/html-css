@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(45deg, salmon, rgb(255, 242, 98) 40%, rgb(255, 192, 145));
+}
+
+#tela {
+    flex-basis: 768px;
+    min-width: 300px;
+
+    margin: 20px;
+    padding: 20px;
+
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(35, 35, 35, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(35, 35, 35, 0.1);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+form {
+    width: 350px;
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+}
+
+div {
+    margin: 20px 0px;
+    color: rgb(195, 45, 25);
+}
+
+div > label {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#txtuser, #txtsenha {
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(35, 35, 35, 0.1);
+    border-radius: 15px;
+
+    width: 250px;
+    padding: 10px 20px;
+}
+
+#botões-caixa > input {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: rgb(195, 45, 25);
+
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    background-color: salmon;
+    color: white;
+    border: 1px solid rgba(35, 35, 35, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(35, 35, 35, 0.1);
+
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#botões-caixa > input:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: inherit;
+
+    transition: background-color 0.2s, color 0.5s;
+}
+
+#botões-caixa > input:active {
+    background-color: inherit;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(195, 45, 25);
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        height: 100%;
+    }
+    
+    #tela {
+        flex-basis: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+
+        transition: flex-basis 1s;
+    }
+}

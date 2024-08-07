@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html, body {
+            height: 100vh;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: black;
+            
+        }
+
+        div {
+            font-size: 3em;
+            text-align: center;
+
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        @media screen and (min-width: 768px) {
+            div {
+                font-size: 6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="visor"></div>
+
+    <script>
+        function atualizaHora() {
+            let data = new Date();
+            let horas = data.getHours();
+            let minutos = data.getMinutes();
+            let segundos = data.getSeconds();
+
+            if (horas < 10) {
+                horas = '0' + horas;
+            }
+            if (minutos < 10) {
+                minutos = '0' + minutos;
+            }
+            if (segundos < 10) {
+                segundos = '0' + segundos;
+            }
+
+            document.getElementById('visor').innerHTML = `${horas}:${minutos}:${segundos}`;
+        }
+
+        window.setInterval(atualizaHora, 1000);
+        atualizaHora();
+        
+    </script>
+</body>
+</html>

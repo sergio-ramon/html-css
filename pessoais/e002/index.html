@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <section id="tela">
+        <form action="" id="form">
+            <div id="user-caixa">
+                <label for="txtuser">Usuário</label>
+                <input type="text" name="txtuser" id="txtuser" required minlength="8" maxlength="20">
+            </div>
+            <div id="senha-caixa">
+                <label for="txtsenha">Senha</label>
+                <input type="password" name="txtsenha" id="txtsenha" required minlength="8" maxlength="30">
+            </div>
+
+            <div id="botões-caixa">
+                <input type="submit" value="Entrar">
+                <input type="reset" value="Limpar">
+            </div>            
+        </form>
+
+        <a href="#">Esqueci a senha</a>
+    </section>
+
+    <script>
+        const form = document.getElementById('form')
+
+        form.addEventListener('submit', enviar => {
+            enviar.preventDefault();
+
+            alert('Acesso permitido!')
+        })
+        
+    </script>
+</body>
+</html>
