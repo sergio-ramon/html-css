@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+/*
+    Paleta de cores
+    #2CA4BF - Azul claro
+    #30B1BF - Azul clarinho
+    #260101 - Preto
+    #F2F2F2 - Branco
+    #BFBFBF - Cinza
+
+*/
+
+:root {
+    --azul-clarinho: #30B1BF;
+    --azul-claro: #2CA4BF;
+    --preto: #260101;
+    --branco: #F2F2F2;
+    --cinza: #BFBFBF;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: var(--azul-clarinho);
+
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+section#login {
+    overflow: hidden;
+
+    background-color: var(--branco);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+    width: 270px;
+    height: 500px;
+    border-radius: 20px;
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
+}
+
+section#login > div#img {
+    display: block;
+    background: var(--azul-clarinho) url(../imagens/pexels-david-underland-3523621.jpg) no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
+section#login > div#form {
+    display: block;
+    padding: 10px;
+
+}
+
+div#form > h1 {
+    text-align: center;
+    color: var(--azul-claro);
+    font-size: 2em;
+
+    margin-bottom: 5px;
+}
+
+div#form > p {
+    font-size: 0.8em;
+    margin: 10px 0;
+}
+
+div#form div.campo {
+    background-color: var(--azul-claro);
+    height: 40px;
+    border: 4px solid var(--azul-claro);
+    border-radius: 8px;
+
+    margin: 5px 0;
+    padding-left: 5px;
+}
+
+div.campo input {
+    background-color: var(--cinza);
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    transform: translateY(-8px);
+}
+
+div.campo input:focus-within {
+    background-color: var(--branco);
+}
+
+div.campo i {
+    color: var(--branco);
+    font-size: 1.5em;
+    width: 40px;
+    padding: 5px;
+}
+
+div#form input[type=submit] {
+    display: block;
+    background-color: var(--azul-claro);
+    color: var(--branco);
+    cursor: pointer;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 1em;
+
+    width: 100%;
+    height: 40px;
+}
+
+div#form input[type=submit]:hover {
+    background-color: var(--azul-clarinho);
+}
+
+div#form a.botao {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+
+    margin-top: 10px;
+}
+
+div#form a.botao:hover {
+    color: rgb(39, 93, 255);
+    text-decoration: underline;
+}
